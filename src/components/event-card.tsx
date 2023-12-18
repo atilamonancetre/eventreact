@@ -34,7 +34,7 @@ const EventCard: FunctionComponent<Props> = ({event, borderColor = '#009688'}) =
         <div className="col s6 m4" onClick={()=> goToEvent(event.id)} onMouseEnter={showBorder} onMouseLeave={hideBorder}>
             <div className="card horizontal" style={{borderColor: color}}>
                 <div className="card-image">
-                    <img src={event.picture} alt={event.name}/>
+                    <img src={event.pictureUrl} alt={event.name}/>
                 </div>
                 <div className="card-stacked">
                     <div className="card-content">

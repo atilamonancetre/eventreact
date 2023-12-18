@@ -27,7 +27,7 @@ const EventDetail: FunctionComponent<RouteComponentProps<Params>> = ({ match }) 
                         <h2 className="header center">{ event.name }</h2>
                         <div className="card hoverable">
                             <div className="card-image">
-                                <img src={event.picture} alt={event.name} style={{width: '250px', margin: '0 auto'}}/>
+                                <img src={event.pictureUrl} alt={event.name} style={{width: '250px', margin: '0 auto'}}/>
                                 <Link to={`/events/edit/${event.id}`} className={"btn btn-floating halfway-fab waves-effect waves-light"}>
                                     <i className="material-icons">edit</i>
                                 </Link>
@@ -39,6 +39,18 @@ const EventDetail: FunctionComponent<RouteComponentProps<Params>> = ({ match }) 
                                         <tr>
                                             <td>Nom</td>
                                             <td><strong>{ event.name }</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Nombre de personnes</td>
+                                            <td>{event.nombre_de_personnes}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Lieu</td>
+                                            <td>{event.lieu}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Objectif de l'événement</td>
+                                            <td>{event.objectif_de_l_evenement}</td>
                                         </tr>
                                         <tr>
                                             <td>Types</td>
